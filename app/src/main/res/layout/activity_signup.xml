@@ -11,7 +11,8 @@
         android:layout_width="354dp"
         android:layout_height="56dp"
         android:hint="First Name"
-        app:layout_constraintBottom_toTopOf="@+id/editText"
+        android:id="@+id/fname"
+        app:layout_constraintBottom_toTopOf="@+id/lname"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.456"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,31 +20,31 @@
         app:layout_constraintVertical_bias="0.96" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/lname"
         android:layout_width="354dp"
         android:layout_height="56dp"
         android:layout_marginBottom="8dp"
         android:hint="Last Name"
-        app:layout_constraintBottom_toTopOf="@+id/editTextPhone"
+        app:layout_constraintBottom_toTopOf="@+id/mobile"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.456"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/editTextPhone"
+        android:id="@+id/mobile"
         android:layout_width="350dp"
         android:layout_height="56dp"
         android:layout_marginBottom="8dp"
         android:ems="10"
         android:hint="Mobile Number"
         android:inputType="phone"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPostalAddress"
+        app:layout_constraintBottom_toTopOf="@+id/address"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.426"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPostalAddress"
+        android:id="@+id/address"
         android:layout_width="356dp"
         android:layout_height="66dp"
         android:layout_marginBottom="56dp"
@@ -67,6 +68,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.465"
         app:layout_constraintStart_toStartOf="parent" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

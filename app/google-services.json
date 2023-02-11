@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "402344077143",
+    "project_id": "uconnect-1af3f",
+    "storage_bucket": "uconnect-1af3f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:402344077143:android:62ab2979b66f8ea05d0012",
+        "android_client_info": {
+          "package_name": "com.example.uconnect"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "402344077143-uicvlbg2lo4crl7n4rgc8qg57pjug3ih.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAU_XRc234A_DROXzSvk6ZgnBpMEzn7mg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "402344077143-uicvlbg2lo4crl7n4rgc8qg57pjug3ih.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

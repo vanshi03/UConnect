@@ -9,4 +9,9 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+    <string name="Tagline">UConnect, get\'s you where you\'re going!!</string>
+    <string name="AppName">UConnect</string>
+    <string name="login_or_signup">Login or SignUp</string>
+    <string name="we_will_send_you_an_one_time_otp_on_the_given_mobile_number">We will send you an one time OTP on the given mobile number</string>
+    <string name="enter_mobile_number">Enter mobile number</string>
 </resources>

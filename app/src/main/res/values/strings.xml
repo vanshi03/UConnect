@@ -14,4 +14,9 @@
     <string name="login_or_signup">Login or SignUp</string>
     <string name="we_will_send_you_an_one_time_otp_on_the_given_mobile_number">We will send you an one time OTP on the given mobile number</string>
     <string name="enter_mobile_number">Enter mobile number</string>
+    <string name="please_enter_the_otp_sent_to_you">Please Enter the OTP sent to you</string>
+    <string name="otp_verification">OTP Verification</string>
+    <string name="didnt_recieve_the_otp">Didnt Recieve the OTP</string>
+    <string name="resend_otp_again">RESEND OTP AGAIN</string>
+    <string name="submit">SUBMIT</string>
 </resources>

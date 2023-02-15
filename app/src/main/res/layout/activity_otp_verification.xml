@@ -21,49 +21,50 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:gravity="center"
-        android:text="OTP Verification"
+        android:text="@string/otp_verification"
         android:textColor="@color/black"
         android:textSize="25sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView7"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <TextView
         android:id="@+id/textView7"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_width="413dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="12dp"
         android:gravity="center"
-        android:text="Please Enter the OTP sent to you"
+        android:text="@string/please_enter_the_otp_sent_to_you"
         android:textColor="@color/dark_grey"
         android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/textmobileshownumber"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
     <TextView
         android:id="@+id/textmobileshownumber"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="409dp"
+        android:layout_height="34dp"
         android:gravity="center"
         android:textColor="@color/black"
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="301dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <EditText
         android:id="@+id/inputotp1"
         android:layout_width="40dp"
         android:layout_height="46dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="56dp"
         android:background="@drawable/backgroundbox"
         android:gravity="center"
         android:imeOptions="actionNext"
@@ -73,18 +74,18 @@
         android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/inputotp2"
-        app:layout_constraintHorizontal_bias="0.795"
+        app:layout_constraintBottom_toTopOf="@+id/textView8"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textmobileshownumber"
+        app:layout_constraintVertical_bias="0.114"
         tools:ignore="LabelFor" />
 
     <EditText
         android:id="@+id/inputotp2"
         android:layout_width="40dp"
         android:layout_height="46dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="64dp"
         android:background="@drawable/backgroundbox"
         android:gravity="center"
         android:imeOptions="actionNext"
@@ -95,16 +96,17 @@
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textView8"
-        app:layout_constraintEnd_toStartOf="@+id/inputotp3"
+        app:layout_constraintStart_toEndOf="@+id/inputotp1"
         app:layout_constraintTop_toBottomOf="@+id/textmobileshownumber"
-        app:layout_constraintVertical_bias="0.278"
+        app:layout_constraintVertical_bias="0.041"
         tools:ignore="LabelFor" />
 
     <EditText
         android:id="@+id/inputotp3"
         android:layout_width="40dp"
         android:layout_height="46dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="64dp"
         android:background="@drawable/backgroundbox"
         android:gravity="center"
         android:imeOptions="actionNext"
@@ -115,15 +117,17 @@
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textView8"
-        app:layout_constraintEnd_toStartOf="@+id/inputotp4"
+        app:layout_constraintStart_toEndOf="@+id/inputotp2"
         app:layout_constraintTop_toBottomOf="@+id/textmobileshownumber"
-        app:layout_constraintVertical_bias="0.505"
+        app:layout_constraintVertical_bias="0.041"
         tools:ignore="LabelFor" />
 
     <EditText
         android:id="@+id/inputotp4"
         android:layout_width="40dp"
         android:layout_height="46dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="68dp"
         android:background="@drawable/backgroundbox"
         android:gravity="center"
         android:imeOptions="actionNext"
@@ -133,15 +137,18 @@
         android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/resendotp"
-        app:layout_constraintEnd_toStartOf="@+id/inputotp5"
+        app:layout_constraintBottom_toTopOf="@+id/textView8"
+        app:layout_constraintStart_toEndOf="@+id/inputotp3"
         app:layout_constraintTop_toBottomOf="@+id/textmobileshownumber"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="LabelFor" />
 
     <EditText
         android:id="@+id/inputotp5"
         android:layout_width="40dp"
         android:layout_height="46dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="64dp"
         android:background="@drawable/backgroundbox"
         android:gravity="center"
         android:imeOptions="actionNext"
@@ -151,15 +158,19 @@
         android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/resendotp"
-        app:layout_constraintEnd_toStartOf="@+id/inputotp6"
+        app:layout_constraintBottom_toTopOf="@+id/textView8"
+        app:layout_constraintStart_toEndOf="@+id/inputotp4"
         app:layout_constraintTop_toBottomOf="@+id/textmobileshownumber"
+        app:layout_constraintVertical_bias="0.041"
         tools:ignore="LabelFor" />
 
     <EditText
         android:id="@+id/inputotp6"
         android:layout_width="40dp"
         android:layout_height="46dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="56dp"
         android:background="@drawable/backgroundbox"
         android:gravity="center"
         android:imeOptions="actionNext"
@@ -169,46 +180,51 @@
         android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/resendotp"
+        app:layout_constraintBottom_toTopOf="@+id/textView8"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.821"
+        app:layout_constraintStart_toEndOf="@+id/inputotp5"
         app:layout_constraintTop_toBottomOf="@+id/textmobileshownumber"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="LabelFor" />
 
     <TextView
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
-        android:text="Didnt Recieve the OTP"
+        android:layout_marginStart="56dp"
+        android:layout_marginBottom="52dp"
+        android:text="@string/didnt_recieve_the_otp"
         android:textColor="@color/black"
         android:textSize="14sp"
-        app:layout_constraintTop_toBottomOf="@+id/inputotp1"
-        tools:layout_editor_absoluteX="68dp" />
+        app:layout_constraintBottom_toTopOf="@+id/buttonsubmitotp"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/resendotp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="RESEND OTP AGAIN"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="52dp"
+        android:text="@string/resend_otp_again"
         android:textColor="@color/black"
         android:textSize="15sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="231dp"
-        tools:layout_editor_absoluteY="471dp" />
+        app:layout_constraintBottom_toTopOf="@+id/buttonsubmitotp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView8" />
 
     <Button
         android:id="@+id/buttonsubmitotp"
         android:layout_width="285dp"
         android:layout_height="54dp"
-        android:layout_margin="30dp"
+        android:layout_marginBottom="80dp"
         android:backgroundTint="@color/yellow"
-        android:text="SUBMIT"
+        android:text="@string/submit"
         android:textColor="@color/black"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.571"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/resendotp"
-        app:layout_constraintVertical_bias="0.244" />
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

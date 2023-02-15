@@ -63,7 +63,7 @@
         android:id="@+id/inputotp1"
         android:layout_width="40dp"
         android:layout_height="46dp"
-        android:layout_marginStart="36dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="56dp"
         android:background="@drawable/backgroundbox"
         android:gravity="center"

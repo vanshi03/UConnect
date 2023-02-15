@@ -18,10 +18,7 @@ public class OtpVerification extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_otp_verification);
-
-
-        Button verifybuttonclick = findViewById(R.id.buttongetotp);
-
+        Button verifybuttonclick = findViewById(R.id.buttonsubmitotp);
         inputnumber1 = findViewById(R.id.inputotp1);
         inputnumber2 = findViewById(R.id.inputotp2);
         inputnumber3 = findViewById(R.id.inputotp3);

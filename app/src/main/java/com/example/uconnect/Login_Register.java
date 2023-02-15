@@ -1,5 +1,7 @@
 package com.example.uconnect;
 
+import static android.provider.AlarmClock.EXTRA_MESSAGE;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -14,11 +16,11 @@ public class Login_Register extends AppCompatActivity {
 
     EditText enternumber;
     Button getotpbutton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_register);
-
 //                overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
 
         enternumber = findViewById(R.id.input_mobile_number);
@@ -45,6 +47,7 @@ public class Login_Register extends AppCompatActivity {
                 }
             }
         );
+    }
+}
 
 
-    }}

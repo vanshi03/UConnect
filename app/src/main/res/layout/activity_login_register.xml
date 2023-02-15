@@ -116,6 +116,7 @@
             android:layout_height="40dp"
             android:background="@null"
             android:hint="9810986543"
+            android:maxLength="10"
             android:imeOptions="actionDone"
             android:importantForAutofill="no"
             android:inputType="number"
@@ -125,20 +126,38 @@
             android:textStyle="bold" />
     </LinearLayout>
 
-    <Button
-        android:id="@+id/buttongetotp"
-        android:layout_width="285dp"
-        android:layout_height="54dp"
-        android:layout_margin="30dp"
-        android:layout_marginTop="52dp"
-        android:backgroundTint="@color/yellow"
-        android:text="Continue"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:onClick="sendMessage"
+    <FrameLayout
+        android:layout_width="407dp"
+        android:layout_height="151dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.287" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <Button
+            android:id="@+id/buttongetotp"
+            android:layout_width="285dp"
+            android:layout_height="54dp"
+            android:layout_margin="30dp"
+            android:layout_marginTop="52dp"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/yellow"
+            android:onClick="sendMessage"
+            android:text="Continue"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            app:layout_constraintVertical_bias="0.287" />
+
+        <ProgressBar
+            android:id="@+id/progressbar_sending_otp"
+            android:layout_width="21dp"
+            android:layout_height="14dp"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+    </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

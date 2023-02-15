@@ -7,7 +7,6 @@
     android:background="#21FFC107"
     tools:context=".OtpVerification">
 
-
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="130dp"
@@ -49,8 +48,8 @@
 
     <TextView
         android:id="@+id/textmobileshownumber"
-        android:layout_width="409dp"
-        android:layout_height="34dp"
+        android:layout_width="414dp"
+        android:layout_height="40dp"
         android:gravity="center"
         android:textColor="@color/black"
         android:textSize="14sp"
@@ -189,39 +188,57 @@
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginBottom="124dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginBottom="84dp"
         android:text="@string/didnt_recieve_the_otp"
         android:textColor="@color/black"
         android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/buttonsubmitotp"
+        app:layout_constraintBottom_toTopOf="@+id/frameLayout"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/resendotp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginBottom="124dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="84dp"
         android:text="@string/resend_otp_again"
         android:textColor="@color/black"
         android:textSize="15sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/buttonsubmitotp"
+        app:layout_constraintBottom_toTopOf="@+id/frameLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.079"
         app:layout_constraintStart_toEndOf="@+id/textView8" />
 
-    <Button
-        android:id="@+id/buttonsubmitotp"
-        android:layout_width="285dp"
-        android:layout_height="54dp"
-        android:layout_marginBottom="80dp"
-        android:backgroundTint="@color/yellow"
-        android:text="@string/submit"
-        android:textColor="@color/black"
-        android:textStyle="bold"
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="311dp"
+        android:layout_height="135dp"
+        android:layout_marginBottom="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/buttonsubmitotp"
+            android:layout_width="285dp"
+            android:layout_height="54dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="28dp"
+            android:backgroundTint="@color/yellow"
+            android:text="@string/submit"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.436"
+            app:layout_constraintStart_toStartOf="parent" />
+        <ProgressBar
+            android:id="@+id/progressbar_verify_otp"
+            android:layout_width="21dp"
+            android:layout_height="14dp"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+    </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

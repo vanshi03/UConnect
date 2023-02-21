@@ -27,33 +27,33 @@ public class Signup extends AppCompatActivity {
         final EditText mobile=findViewById(R.id.mobile);
         final EditText address=findViewById(R.id.address);
         Button login =findViewById(R.id.LoginOfSignup);
-        Button btn1=findViewById(R.id.register);
+        Button btn=findViewById(R.id.register);
             ProgressBar progressBar = findViewById(R.id.progressbar_sending_otp);
-            btn1.setOnClickListener(v1 -> {
+            btn.setOnClickListener(v1 -> {
                         if (!mobile.getText().toString().trim().isEmpty()){
                             if ((mobile.getText().toString().trim()).length()==10){
                                 progressBar.setVisibility(View.VISIBLE);
-                                btn1.setVisibility(View.INVISIBLE);
+                                btn.setVisibility(View.INVISIBLE);
                                 PhoneAuthProvider.getInstance().verifyPhoneNumber("+91" + mobile.getText().toString(),
                                         60, TimeUnit.SECONDS, Signup.this,
                                         new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
                                             @Override
                                             public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential) {
                                                 progressBar.setVisibility(View.GONE);
-                                                btn1.setVisibility(View.VISIBLE);
+                                                btn.setVisibility(View.VISIBLE);
                                             }
 
                                             @Override
                                             public void onVerificationFailed(@NonNull FirebaseException e) {
                                                 progressBar.setVisibility(View.GONE);
-                                               btn1.setVisibility(View.VISIBLE);
+                                               btn.setVisibility(View.VISIBLE);
                                                 Toast.makeText(Signup.this, "Please check internet connection", Toast.LENGTH_SHORT).show();
                                             }
 
                                             @Override
                                             public void onCodeSent(@NonNull String backendotp, @NonNull PhoneAuthProvider.ForceResendingToken forceResendingToken) {
                                                 progressBar.setVisibility(View.GONE);
-                                                btn1.setVisibility(View.VISIBLE);
+                                                btn.setVisibility(View.VISIBLE);
                                                 Intent intent = new Intent(getApplicationContext(), OtpVerification.class);
                                                 intent.putExtra( "mobile", mobile.getText().toString());
                                                 intent.putExtra( "fname", fname.getText().toString());

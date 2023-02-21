@@ -26,6 +26,7 @@ public class Signup extends AppCompatActivity {
         final EditText lname=findViewById(R.id.lname);
         final EditText mobile=findViewById(R.id.mobile);
         final EditText address=findViewById(R.id.address);
+        Button login =findViewById(R.id.LoginOfSignup);
         Button btn1=findViewById(R.id.register);
             ProgressBar progressBar = findViewById(R.id.progressbar_sending_otp);
             btn1.setOnClickListener(v1 -> {
@@ -75,5 +76,13 @@ public class Signup extends AppCompatActivity {
                         }
                     }
             );
+
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Signup.this, Login.class);
+                startActivity(intent);;
+            }
+        });
         }
     }

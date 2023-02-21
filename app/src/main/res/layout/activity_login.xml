@@ -116,12 +116,12 @@
     </LinearLayout>
 
     <FrameLayout
-        android:layout_width="407dp"
-        android:layout_height="151dp"
+        android:id="@+id/frameLayout2"
+        android:layout_width="410dp"
+        android:layout_height="84dp"
         android:layout_marginTop="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
         app:layout_constraintVertical_bias="0.0">
@@ -150,5 +150,29 @@
             android:layout_height="14dp"
             android:layout_gravity="center"
             android:visibility="gone" />
+
+
     </FrameLayout>
+
+    <TextView
+        android:layout_width="82dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="8dp"
+        android:text="New user?"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/Signup"
+        app:layout_constraintHorizontal_bias="0.951"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout2"
+        app:layout_constraintVertical_bias="0.195" />
+
+    <Button
+        android:id="@+id/Signup"
+        android:layout_width="118dp"
+        android:layout_height="48dp"
+        android:text="Signup"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout2"
+        app:layout_constraintVertical_bias="0.146" />
 </androidx.constraintlayout.widget.ConstraintLayout>

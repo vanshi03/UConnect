@@ -46,14 +46,6 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".Login_Register"
-            android:exported="false"
-            android:screenOrientation="portrait">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:screenOrientation="portrait">

@@ -15,7 +15,7 @@
         android:layout_marginTop="64dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo"/>
+        app:srcCompat="@drawable/logo" />
 
 
     <TextView
@@ -52,22 +52,21 @@
         android:id="@+id/textView2"
         android:layout_width="154dp"
         android:layout_height="26dp"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="32dp"
         android:text="@string/login"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/textmobileshownumber" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="254dp"
         android:layout_height="27dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:gravity="center"
         android:text="@string/enter_mobile_number"
         android:textColor="@color/light_grey"
@@ -100,12 +99,12 @@
         <EditText
             android:id="@+id/input_mobile_number"
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
+            android:layout_height="33dp"
             android:background="@null"
             android:hint="9810986543"
+            android:inputType="number"
             android:imeOptions="actionDone"
             android:importantForAutofill="no"
-            android:inputType="number"
             android:maxLength="10"
             android:paddingLeft="5dp"
             android:textColor="@color/black"
@@ -113,34 +112,19 @@
             android:textStyle="bold" />
     </LinearLayout>
 
+
     <FrameLayout
         android:id="@+id/frameLayout2"
         android:layout_width="372dp"
         android:layout_height="57dp"
         android:layout_marginTop="20dp"
+        android:layout_marginBottom="156dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
         app:layout_constraintVertical_bias="0.203">
-
-        <Button
-            android:id="@+id/MainLogin"
-            android:layout_width="285dp"
-            android:layout_height="54dp"
-            android:layout_gravity="center"
-            android:layout_margin="30dp"
-            android:layout_marginTop="52dp"
-            android:backgroundTint="@color/yellow"
-            android:onClick="sendMessage"
-            android:text="Login"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-            app:layout_constraintVertical_bias="0.287" />
 
         <ProgressBar
             android:id="@+id/progressbar_sending_otp"
@@ -149,7 +133,19 @@
             android:layout_gravity="center"
             android:visibility="gone" />
 
-
+        <Button
+            android:id="@+id/MainLogin"
+            android:layout_width="285dp"
+            android:layout_height="54dp"
+            android:layout_gravity="center"
+            android:layout_margin="30dp"
+            android:layout_marginTop="52dp"
+            android:layout_marginBottom="108dp"
+            android:backgroundTint="@color/yellow"
+            android:onClick="sendMessage"
+            android:text="Login"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
     </FrameLayout>
 
     <TextView
@@ -159,10 +155,23 @@
         android:text="New user?"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/Signup"
-        app:layout_constraintHorizontal_bias="0.569"
+        app:layout_constraintHorizontal_bias="0.584"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/frameLayout2"
-        app:layout_constraintVertical_bias="0.139" />
+        app:layout_constraintVertical_bias="0.47" />
+
+    <TextView
+        android:id="@+id/textmobileshownumber"
+        android:layout_width="282dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="48dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <Button
         android:id="@+id/Signup"
@@ -174,4 +183,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/frameLayout2"
         app:layout_constraintVertical_bias="0.328" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -14,14 +14,12 @@ public class MainActivity extends AppCompatActivity {
         int TIME_OUT = 2000;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        final View myLayout = findViewById(R.id.textView);
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 Intent i = new Intent(MainActivity.this, Login.class);
                 startActivity(i);
                 overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
-                finish();
             }
         }, TIME_OUT);
     }

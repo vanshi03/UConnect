@@ -52,7 +52,7 @@
         android:id="@+id/textView2"
         android:layout_width="154dp"
         android:layout_height="26dp"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="104dp"
         android:text="@string/login"
         android:textAlignment="center"
         android:textColor="@color/black"
@@ -64,40 +64,29 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <TextView
-        android:id="@+id/textView5"
-        android:layout_width="387dp"
-        android:layout_height="36dp"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:text="@string/we_will_send_you_an_one_time_otp_on_the_given_mobile_number"
-        android:textColor="@color/light_grey"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
-    <TextView
         android:id="@+id/textView6"
-        android:layout_width="213dp"
-        android:layout_height="31dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="254dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="16dp"
         android:gravity="center"
         android:text="@string/enter_mobile_number"
         android:textColor="@color/light_grey"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="236dp"
         android:layout_height="47dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/backgroundbox"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6">
 
@@ -116,10 +105,10 @@
             android:layout_height="40dp"
             android:background="@null"
             android:hint="9810986543"
-            android:maxLength="10"
             android:imeOptions="actionDone"
             android:importantForAutofill="no"
             android:inputType="number"
+            android:maxLength="10"
             android:paddingLeft="5dp"
             android:textColor="@color/black"
             android:textSize="16sp"
@@ -132,16 +121,18 @@
         android:layout_marginTop="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.0">
 
         <Button
             android:id="@+id/buttongetotp"
             android:layout_width="285dp"
             android:layout_height="54dp"
+            android:layout_gravity="center"
             android:layout_margin="30dp"
             android:layout_marginTop="52dp"
-            android:layout_gravity="center"
             android:backgroundTint="@color/yellow"
             android:onClick="sendMessage"
             android:text="Continue"

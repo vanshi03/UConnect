@@ -15,9 +15,17 @@
         android:layout_marginTop="40dp"
         android:background="@drawable/btn_bg"
         android:text="REGISTER"
+        android:backgroundTint="@color/white"
         app:layout_constraintEnd_toEndOf="@+id/address"
         app:layout_constraintStart_toStartOf="@+id/address"
         app:layout_constraintTop_toBottomOf="@+id/address" />
+
+    <ProgressBar
+        android:id="@+id/progressbar_sending_otp"
+        android:layout_width="21dp"
+        android:layout_height="14dp"
+        android:layout_gravity="center"
+        android:visibility="gone" />
 
     <EditText
         android:id="@+id/mobile"
@@ -29,7 +37,7 @@
         android:drawablePadding="10dp"
         android:ems="10"
         android:hint="Mobile"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
         android:paddingRight="20dp"
@@ -86,7 +94,7 @@
         android:drawableLeft="@drawable/ic_person"
         android:drawablePadding="10dp"
         android:ems="10"
-        android:hint="First NAme"
+        android:hint="First Name"
         android:inputType="textPersonName"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"

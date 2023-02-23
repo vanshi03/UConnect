@@ -84,15 +84,14 @@ public class OtpVerification extends AppCompatActivity {
                                                 CustomerDatabase cdb = new CustomerDatabase();
                                                 Customer cus = new Customer(fname, lname, mobile, address);
                                                 cdb.add(cus).addOnSuccessListener(suc -> {
-                                                    Toast.makeText(OtpVerification.this, "Record Inserted Successfully", Toast.LENGTH_SHORT).show();
+                                                    Toast.makeText(OtpVerification.this, "SignUp Successfull", Toast.LENGTH_SHORT).show();
                                                 }).addOnFailureListener(er -> {
-                                                    Toast.makeText(OtpVerification.this, "Record Insertion Failed", Toast.LENGTH_SHORT).show();
+                                                    Toast.makeText(OtpVerification.this, "SignUp failed", Toast.LENGTH_SHORT).show();
                                                 });
                                                 Intent intent = new Intent(OtpVerification.this, Location_Activity.class);
                                                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                                 startActivity(intent);
                                                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
-
                                             }
                                         }
                                         @Override

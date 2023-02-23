@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.FirebaseException;
@@ -26,7 +27,7 @@ public class Signup extends AppCompatActivity {
         final EditText lname=findViewById(R.id.lname);
         final EditText mobile=findViewById(R.id.mobile);
         final EditText address=findViewById(R.id.address);
-        Button login =findViewById(R.id.LoginOfSignup);
+        TextView login =findViewById(R.id.LoginofSignup);
         Button btn=findViewById(R.id.register);
             ProgressBar progressBar = findViewById(R.id.progressbar_sending_otp);
             btn.setOnClickListener(v1 -> {

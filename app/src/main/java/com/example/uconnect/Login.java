@@ -22,32 +22,44 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         mobile_number=findViewById(R.id.input_mobile_number);
         Button login_button=findViewById(R.id.MainLogin);
-        Button btn=findViewById(R.id.Signup);
-        btn.setOnClickListener(v -> {
+        TextView tv=findViewById(R.id.SignUpofLogin);
+        tv.setOnClickListener(v -> {
             Intent intent = new Intent(Login.this, Signup.class);
             startActivity(intent);
         });
         login_button.setOnClickListener(v -> {
-            String nameString=mobile_number.getText().toString();
-            DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
-            ref.child("Customer").orderByChild("phone").equalTo(nameString).addListenerForSingleValueEvent(new ValueEventListener() {
-                @Override
-                public void onDataChange(DataSnapshot dataSnapshot) {
-                    if(dataSnapshot.exists()){
-                        Toast.makeText(Login.this, "Loging.....", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(Login.this, Location_Activity.class);
-                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                        startActivity(intent);
-                        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+            if (!mobile_number.getText().toString().trim().isEmpty()) {
+                if ((mobile_number.getText().toString().trim()).length() == 10) {
+                    String nameString = mobile_number.getText().toString();
+                    DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
+                    ref.child("Customer").orderByChild("phone").equalTo(nameString).addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            if (dataSnapshot.exists()) {
+//                        Toast.makeText(Login.this, "Loging.....", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(Login.this, Location_Activity.class);
+                                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                                startActivity(intent);
+                                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
 
-                    } else {
-                        Toast.makeText(Login.this, "Please signup first", Toast.LENGTH_SHORT).show();
-                    }
+                            } else {
+                                Toast.makeText(Login.this, "Please signup first", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+
+                        @Override
+                        public void onCancelled(DatabaseError databaseError) {
+                        }
+                    });
+
+                } else {
+                    Toast.makeText(this, "Enter 10 digit mobile number", Toast.LENGTH_SHORT).show();
                 }
-                @Override
-                public void onCancelled(DatabaseError databaseError) {
-                }
-            });
+            }else{
+                Toast.makeText(this, "Mobile number can't be empty", Toast.LENGTH_SHORT).show();
+            }
+
+
         });
     }
 }

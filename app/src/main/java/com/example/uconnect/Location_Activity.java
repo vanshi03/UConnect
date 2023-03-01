@@ -17,5 +17,12 @@ public class Location_Activity extends AppCompatActivity {
             Intent i = new Intent(Location_Activity.this,MapsActivity.class);
             startActivity(i);
         });
+
+        Button auto = findViewById(R.id.AllowAccess);
+        auto.setOnClickListener(v -> {
+            Intent j = new Intent(Location_Activity.this,CurrentLocation.class);
+            startActivity(j);
+        });
+
     }
 }

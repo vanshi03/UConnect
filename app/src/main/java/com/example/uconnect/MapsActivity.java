@@ -1,8 +1,12 @@
 package com.example.uconnect;
 
+import android.content.Intent;
 import android.location.Address;
 import android.location.Geocoder;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.FragmentActivity;
@@ -15,6 +19,8 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import org.w3c.dom.Text;
+
 import java.io.IOException;
 import java.util.List;
 
@@ -22,9 +28,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private GoogleMap mMap;
     Marker marker;
-    // creating a variable
-    // for search view.
     SearchView searchView;
+    TextView proceed;
+    String location;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +39,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         // initializing our search view.
         searchView = findViewById(R.id.idSearchView);
-
+        proceed = findViewById(R.id.proceed);
         // Obtain the SupportMapFragment and get notified
         // when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
@@ -44,7 +50,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             public boolean onQueryTextSubmit(String query) {
                 // on below line we are getting the
                 // location name from search view.
-                String location = searchView.getQuery().toString();
+                location = searchView.getQuery().toString();
 
                 // below line is to create a list of address
                 // where we will store the list of all address.
@@ -92,6 +98,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         });
         // at last we calling our map fragment to update.
         mapFragment.getMapAsync(this);
+        proceed.setOnClickListener(v -> {
+            Intent i = new Intent(MapsActivity.this,Landing_Activity.class);
+            if (location != null || location.equals("")){
+                i.putExtra("location",location);
+                startActivity(i);
+            }else{
+                Toast.makeText(this, "Enter the location", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override

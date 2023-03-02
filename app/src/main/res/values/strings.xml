@@ -24,4 +24,6 @@
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="title_activity_manual">Manual_Activity</string>
     <string name="title_activity_maps">MapsActivity</string>
+    <string name="proceed">
+        <u>Proceed</u></string>
 </resources>

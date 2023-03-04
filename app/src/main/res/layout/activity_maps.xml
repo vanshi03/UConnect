@@ -8,7 +8,7 @@
     <RelativeLayout
         android:id="@+id/relativeLayout2"
         android:layout_width="match_parent"
-        android:layout_height="750dp"
+        android:layout_height="773dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -24,7 +24,7 @@
         <!--search view to search our location-->
         <androidx.appcompat.widget.SearchView
             android:id="@+id/idSearchView"
-            android:layout_width="390dp"
+            android:layout_width="449dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
@@ -34,22 +34,24 @@
             android:elevation="5dp"
             app:iconifiedByDefault="false"
             app:queryHint="Search Here" />
-
     </RelativeLayout>
 
     <TextView
-        android:layout_width="397dp"
-        android:layout_height="36dp"
         android:id="@+id/proceed"
-        android:fontFamily="monospace"
+        android:layout_width="216dp"
+        android:layout_height="49dp"
         android:gravity="center"
-        android:text="@string/proceed"
         android:textAlignment="center"
+        android:fontFamily="monospace"
+        android:text="@string/proceed"
         android:textColor="@color/black"
         android:textSize="20dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayout2" />
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout2"
+        app:layout_constraintVertical_bias="0.384" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

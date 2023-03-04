@@ -8,7 +8,7 @@
     <RelativeLayout
         android:id="@+id/relativeLayout2"
         android:layout_width="match_parent"
-        android:layout_height="773dp"
+        android:layout_height="665dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -38,20 +38,19 @@
 
     <TextView
         android:id="@+id/proceed"
-        android:layout_width="216dp"
+        android:layout_width="0dp"
         android:layout_height="49dp"
-        android:gravity="center"
-        android:textAlignment="center"
         android:fontFamily="monospace"
+        android:gravity="center"
         android:text="@string/proceed"
+        android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="20dp"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayout2"
-        app:layout_constraintVertical_bias="0.384" />
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

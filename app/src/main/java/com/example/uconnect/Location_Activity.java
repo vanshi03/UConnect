@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class Location_Activity extends AppCompatActivity {
 
@@ -18,7 +19,7 @@ public class Location_Activity extends AppCompatActivity {
             startActivity(i);
         });
 
-        Button auto = findViewById(R.id.AllowAccess);
+        TextView auto = findViewById(R.id.AllowAccess);
         auto.setOnClickListener(v -> {
             Intent j = new Intent(Location_Activity.this,CurrentLocation.class);
             startActivity(j);

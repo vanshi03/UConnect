@@ -40,7 +40,7 @@
         android:id="@+id/proceed"
         android:layout_width="0dp"
         android:layout_height="49dp"
-        android:fontFamily="monospace"
+        android:fontFamily="sans-serif-medium"
         android:gravity="center"
         android:text="@string/proceed"
         android:textAlignment="center"

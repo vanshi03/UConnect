@@ -20,8 +20,6 @@
     <string name="resend_otp_again">RESEND OTP AGAIN</string>
     <string name="submit">SUBMIT</string>
     <string name="title_activity_location">Location_Activity</string>
-    <string name="dummy_button">Dummy Button</string>
-    <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="title_activity_manual">Manual_Activity</string>
     <string name="title_activity_maps">MapsActivity</string>
     <string name="proceed">Proceed</string>

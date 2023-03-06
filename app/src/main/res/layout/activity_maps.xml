@@ -39,8 +39,8 @@
     <TextView
         android:id="@+id/proceed"
         android:layout_width="0dp"
-        android:layout_height="101dp"
-        android:layout_marginTop="650dp"
+        android:layout_height="111sp"
+        android:layout_marginTop="690dp"
         android:background="@drawable/proceed_btn"
         android:backgroundTint="@color/white"
         android:fontFamily="monospace"

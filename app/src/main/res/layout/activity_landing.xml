@@ -28,25 +28,28 @@
         android:layout_width="204dp"
         android:layout_height="60dp"
         android:layout_marginStart="-10dp"
+        android:layout_marginTop="50dp"
         android:backgroundTint="@color/yellow"
         android:text="Get Help"
         app:layout_constraintBottom_toTopOf="@+id/btn_add"
-        app:layout_constraintEnd_toStartOf="@+id/Give"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/location_tv"
         app:layout_constraintTop_toBottomOf="@+id/location_tv"
-        app:layout_constraintVertical_bias="0.386" />
+        app:layout_constraintVertical_bias="0.065" />
 
     <Button
         android:id="@+id/Give"
         android:layout_width="204dp"
         android:layout_height="60dp"
-        android:layout_marginTop="58dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="-218dp"
         android:backgroundTint="@color/yellow"
         android:text="Give Help"
+        app:layout_constraintBottom_toTopOf="@+id/btn_add"
         app:layout_constraintEnd_toEndOf="@+id/location_tv"
-        app:layout_constraintTop_toBottomOf="@+id/location_tv" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/GetHelp"
+        app:layout_constraintTop_toBottomOf="@+id/location_tv"
+        app:layout_constraintVertical_bias="0.067" />
 
     <ImageButton
         android:id="@+id/btn_add"

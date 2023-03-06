@@ -99,12 +99,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         // at last we calling our map fragment to update.
         mapFragment.getMapAsync(this);
         proceed.setOnClickListener(v -> {
-            Intent i = new Intent(MapsActivity.this,Landing_Activity.class);
-            if (location != null || location.equals("")){
+            if (location != null && !location.isEmpty() && !searchView.getTouchables().isEmpty()){
+                Intent i = new Intent(MapsActivity.this,Landing_Activity.class);
                 i.putExtra("location",location);
                 startActivity(i);
             }else{
-                Toast.makeText(this, "Enter the location", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Enter/Search the location", Toast.LENGTH_SHORT).show();
             }
         });
     }

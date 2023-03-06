@@ -54,5 +54,4 @@
         app:layout_constraintEnd_toEndOf="@+id/relativeLayout2"
         app:layout_constraintStart_toStartOf="@+id/relativeLayout2"
         app:layout_constraintTop_toTopOf="parent" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

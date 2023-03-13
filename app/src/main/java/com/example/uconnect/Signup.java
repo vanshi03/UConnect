@@ -18,8 +18,8 @@ import com.google.firebase.auth.PhoneAuthProvider;
 
 import java.util.concurrent.TimeUnit;
 
+@SuppressWarnings("deprecation")
 public class Signup extends AppCompatActivity {
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
@@ -78,12 +78,9 @@ public class Signup extends AppCompatActivity {
                     }
             );
 
-        login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Signup.this, Login.class);
-                startActivity(intent);;
-            }
+        login.setOnClickListener(v -> {
+            Intent intent = new Intent(Signup.this, Login.class);
+            startActivity(intent);
         });
         }
     }

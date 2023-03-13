@@ -37,7 +37,6 @@ public class CurrentLocation extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_current_location);
-
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         smf = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.google_map);
         client = LocationServices.getFusedLocationProviderClient(this);

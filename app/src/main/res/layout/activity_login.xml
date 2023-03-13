@@ -141,7 +141,7 @@
             android:layout_margin="30dp"
             android:layout_marginTop="52dp"
             android:layout_marginBottom="108dp"
-            android:backgroundTint="@color/light_pink"
+            android:backgroundTint="@color/design_default_color_error"
             android:onClick="sendMessage"
             android:text="Login"
             android:textColor="@color/black"

@@ -132,6 +132,7 @@
         app:layout_constraintEnd_toEndOf="@+id/linearLayout"
         app:layout_constraintStart_toStartOf="@+id/linearLayout"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
         <Button
             android:id="@+id/MainLogin"
             android:layout_width="285dp"
@@ -140,7 +141,7 @@
             android:layout_margin="30dp"
             android:layout_marginTop="52dp"
             android:layout_marginBottom="108dp"
-            android:backgroundTint="@color/white"
+            android:backgroundTint="@color/green"
             android:onClick="sendMessage"
             android:text="Login"
             android:textColor="@color/black"

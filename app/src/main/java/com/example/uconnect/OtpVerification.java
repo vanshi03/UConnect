@@ -4,7 +4,11 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.location.Address;
+import android.location.Geocoder;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
@@ -24,12 +28,14 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.io.IOException;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
+
 
 public class OtpVerification extends AppCompatActivity {
     EditText inputnumber1, inputnumber2, inputnumber3, inputnumber4, inputnumber5, inputnumber6;
-    String getotpbackend, fname, lname, address, mobile;
-
+    String getotpbackend, fname, lname, address, mobile,latitude,longitude;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,7 +47,7 @@ public class OtpVerification extends AppCompatActivity {
         inputnumber4 = findViewById(R.id.inputotp4);
         inputnumber5 = findViewById(R.id.inputotp5);
         inputnumber6 = findViewById(R.id.inputotp6);
-        TextView textView = findViewById(R.id.textmobileshownumber);
+        TextView textView= findViewById(R.id.textmobileshownumber);
         textView.setText(String.format(
                 "+91-%s", getIntent().getStringExtra("mobile")
         ));
@@ -81,17 +87,32 @@ public class OtpVerification extends AppCompatActivity {
                                             if(dataSnapshot.exists()){
                                                 Toast.makeText(OtpVerification.this, "User already exist", Toast.LENGTH_SHORT).show();
                                             } else {
-                                                CustomerDatabase cdb = new CustomerDatabase();
-                                                Customer cus = new Customer(fname, lname, mobile, address);
-                                                cdb.add(cus).addOnSuccessListener(suc -> {
-                                                    Toast.makeText(OtpVerification.this, "SignUp Successfull", Toast.LENGTH_SHORT).show();
-                                                }).addOnFailureListener(er -> {
-                                                    Toast.makeText(OtpVerification.this, "SignUp failed", Toast.LENGTH_SHORT).show();
-                                                });
-                                                Intent intent = new Intent(OtpVerification.this, Location_Activity.class);
-                                                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                                                startActivity(intent);
-                                                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+                                                if(address!=null){
+                                                    Geocoder geocoder = new Geocoder(OtpVerification.this);
+                                                    List<Address> addressList = null;
+                                                    try {
+                                                        addressList = geocoder.getFromLocationName(address, 1);
+                                                        Address address = addressList.get(0);
+                                                        latitude= String.valueOf(address.getLatitude());
+                                                        longitude=String.valueOf(address.getLongitude());
+                                                    } catch (IOException e) {
+                                                        e.printStackTrace();
+                                                    }
+                                                    CustomerDatabase cdb = new CustomerDatabase();
+                                                    Customer cus = new Customer(fname, lname, mobile, address,latitude,longitude);
+                                                    cdb.add(cus).addOnSuccessListener(suc -> {
+                                                        Toast.makeText(OtpVerification.this, "SignUp Successfull", Toast.LENGTH_SHORT).show();
+                                                    }).addOnFailureListener(er -> {
+                                                        Toast.makeText(OtpVerification.this, "SignUp failed", Toast.LENGTH_SHORT).show();
+                                                    });
+                                                    Intent intent = new Intent(OtpVerification.this, Location_Activity.class);
+                                                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                                                    startActivity(intent);
+                                                    overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+                                                }else{
+                                                    Toast.makeText(OtpVerification.this, "Enter Address", Toast.LENGTH_SHORT).show();
+                                                }
+
                                             }
                                         }
                                         @Override

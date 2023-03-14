@@ -5,15 +5,18 @@ public class Customer {
     private String lname;
     private String phone;
     private String address;
-
+    private String latitude;
+    private String longitude;
     public Customer(){
 
     }
-    public Customer(String fname, String lname, String phone, String address) {
+    public Customer(String fname, String lname, String phone, String address, String latitude, String longitude) {
         this.fname = fname;
         this.lname = lname;
         this.phone = phone;
         this.address = address;
+        this.latitude=latitude;
+        this.longitude=longitude;
     }
 
     public String getFname() {
@@ -47,4 +50,12 @@ public class Customer {
     public void setAddress(String address) {
         this.address = address;
     }
+
+    public String getLatitude() {return latitude;}
+
+    public void setLatitude(String latitude) {this.latitude = latitude;}
+
+    public String getLongitude() {return longitude;}
+
+    public void setLongitude(String longitude) {this.longitude = longitude;}
 }

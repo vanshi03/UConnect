@@ -5,8 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
@@ -31,7 +29,7 @@ import java.util.concurrent.TimeUnit;
 public class OtpVerification extends AppCompatActivity {
     EditText inputnumber1, inputnumber2, inputnumber3, inputnumber4, inputnumber5, inputnumber6;
     String getotpbackend, fname, lname, address, mobile;
-    TextView textView ;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +41,7 @@ public class OtpVerification extends AppCompatActivity {
         inputnumber4 = findViewById(R.id.inputotp4);
         inputnumber5 = findViewById(R.id.inputotp5);
         inputnumber6 = findViewById(R.id.inputotp6);
+        TextView textView = findViewById(R.id.textmobileshownumber);
         textView.setText(String.format(
                 "+91-%s", getIntent().getStringExtra("mobile")
         ));

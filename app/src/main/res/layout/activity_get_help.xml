@@ -4,16 +4,105 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg"
     tools:context=".Get_Help_Activity">
 
+
     <TextView
-        android:id="@+id/textView12"
-        android:layout_width="158dp"
-        android:layout_height="48dp"
-        android:text="GET HELP"
-        android:textSize="30sp"
+        android:id="@+id/textView13"
+        android:layout_width="338dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="70dp"
+        android:gravity="center"
+        android:text="Event Details"
+        android:textColor="@color/white"
+        android:textSize="36sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/ig_icon"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="TITLE"
+        android:inputType="textPersonName"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="10dp"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="350dp"
+        android:layout_height="154dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/backgroundbox"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="Enter the details of the events you want to have a buddy for👩🏾‍🤝‍👩🏼"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="10dp"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/editText"
+        app:layout_constraintStart_toStartOf="@+id/editText"
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+    <TextView
+        android:id="@+id/dateTextView"
+        android:layout_width="173dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="@+id/editText2"
+        app:layout_constraintStart_toEndOf="@+id/SetDate"
+        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+
+    <Button
+        android:id="@+id/SetDate"
+        android:layout_width="151dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="-200dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="@color/design_default_color_background"
+        android:text="set date"
+        android:textColor="@color/purple_700"
+        app:layout_constraintEnd_toEndOf="@+id/editText2"
+        app:layout_constraintStart_toStartOf="@+id/editText2"
+        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+
+    <Button
+        android:id="@+id/addEvent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/white"
+        android:text="ADD"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/editText2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editText2"
+        app:layout_constraintTop_toBottomOf="@+id/editText2"
+        app:layout_constraintVertical_bias="0.412" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+

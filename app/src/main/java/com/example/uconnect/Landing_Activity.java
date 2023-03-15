@@ -51,6 +51,7 @@ public class Landing_Activity extends AppCompatActivity {
         if(requestCode==1)
         {
             if(resultCode==RESULT_OK){
+
                 String title  = data.getStringExtra("title");
                 String details  = data.getStringExtra("details");
                 String date  = data.getStringExtra("date");

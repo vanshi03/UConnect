@@ -47,6 +47,7 @@ public class Get_Help_Activity extends AppCompatActivity implements DatePickerDi
                 //startActivity(i);
                 finish();
             }
+
         });
         button.setOnClickListener(v -> {
             DialogFragment datePicker = new DatePickerFragment();

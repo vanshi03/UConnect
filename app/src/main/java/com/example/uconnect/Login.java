@@ -26,6 +26,7 @@ public class Login extends AppCompatActivity {
             Intent intent = new Intent(Login.this, Signup.class);
             startActivity(intent);
         });
+
         login_button.setOnClickListener(v -> {
             if (!mobile_number.getText().toString().trim().isEmpty()) {
                 if ((mobile_number.getText().toString().trim()).length() == 10) {

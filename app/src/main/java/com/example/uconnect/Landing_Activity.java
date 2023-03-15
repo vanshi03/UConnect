@@ -14,10 +14,9 @@ import java.io.IOException;
 import java.util.List;
 
 public class Landing_Activity extends AppCompatActivity {
-    TextView location_tv;
+    TextView location_tv,eventInfo,Clicktoadd;
     ImageButton img_btn;
     String latitude, longitude, address;
-    TextView eventInfo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,20 +46,22 @@ public class Landing_Activity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
         super.onActivityResult(requestCode, resultCode, data);
+        Clicktoadd = findViewById(R.id.Clicktoadd);
+        img_btn = findViewById(R.id.btn_add);
         eventInfo= findViewById(R.id.EventInfo);
         if(requestCode==1)
         {
             if(resultCode==RESULT_OK){
-
+                Clicktoadd.setVisibility(View.INVISIBLE);
+                img_btn.setVisibility(View.INVISIBLE);
                 String title  = data.getStringExtra("title");
                 String details  = data.getStringExtra("details");
                 String date  = data.getStringExtra("date");
-                eventInfo.setText(title + details + date);
+                eventInfo.setText(title +'\n' + details + "\n" + date);
             }
             if(resultCode==RESULT_CANCELED){
                 eventInfo.setText("nothing to display");
             }
-
         }
     }
 }

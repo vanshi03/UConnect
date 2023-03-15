@@ -68,7 +68,7 @@
         tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
 
     <TextView
-        android:id="@+id/ClicktoAdd"
+        android:id="@+id/Clicktoadd"
         android:layout_width="139dp"
         android:layout_height="39dp"
         android:layout_marginBottom="204dp"

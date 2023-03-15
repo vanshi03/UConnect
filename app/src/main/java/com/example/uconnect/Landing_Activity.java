@@ -17,6 +17,7 @@ public class Landing_Activity extends AppCompatActivity {
     TextView location_tv;
     ImageButton img_btn;
     String latitude, longitude, address;
+    TextView eventInfo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,8 +39,27 @@ public class Landing_Activity extends AppCompatActivity {
             img_btn = findViewById(R.id.btn_add);
             img_btn.setOnClickListener(v -> {
                 Intent i = new Intent(Landing_Activity.this, Get_Help_Activity.class);
-                startActivity(i);
+                //noinspection deprecation
+                startActivityForResult(i,1);
             });
+        }
+    }
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+        super.onActivityResult(requestCode, resultCode, data);
+        eventInfo= findViewById(R.id.EventInfo);
+        if(requestCode==1)
+        {
+            if(resultCode==RESULT_OK){
+                String title  = data.getStringExtra("title");
+                String details  = data.getStringExtra("details");
+                String date  = data.getStringExtra("date");
+                eventInfo.setText(title + details + date);
+            }
+            if(resultCode==RESULT_CANCELED){
+                eventInfo.setText("nothing to display");
+            }
+
         }
     }
 }

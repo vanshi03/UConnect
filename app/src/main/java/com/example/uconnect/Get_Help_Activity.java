@@ -43,7 +43,9 @@ public class Get_Help_Activity extends AppCompatActivity implements DatePickerDi
                 i.putExtra( "title", title.getText().toString());
                 i.putExtra( "details", details.getText().toString());
                 i.putExtra( "date", textView.getText().toString());
-                startActivity(i);
+                setResult(RESULT_OK, i);
+                //startActivity(i);
+                finish();
             }
         });
         button.setOnClickListener(v -> {

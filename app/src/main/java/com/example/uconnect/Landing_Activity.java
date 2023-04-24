@@ -24,7 +24,7 @@ import java.util.List;
 public class Landing_Activity extends AppCompatActivity {
     TextView location_tv,eventInfo,Clicktoadd;
     ImageButton img_btn;
-    String latitude, longitude, address;
+    String latitude, longitude, address,caddress;
     Double currentlatitude,currentlongitude;
     private DatabaseReference databaseReference;
     private static final double RADIUS_OF_EARTH_KM = 6371.01;
@@ -34,6 +34,7 @@ public class Landing_Activity extends AppCompatActivity {
         setContentView(R.layout.activity_landing);
         location_tv = findViewById(R.id.location_tv);
         address = getIntent().getStringExtra("location");
+        //caddress = getIntent().getStringExtra("clocation");
         location_tv.setText(address);
         if (address != null) {
             Geocoder geocoder = new Geocoder(Landing_Activity.this);

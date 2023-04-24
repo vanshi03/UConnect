@@ -9,8 +9,8 @@
 
     <TextView
         android:id="@+id/location_tv"
-        android:layout_width="180dp"
-        android:layout_height="40dp"
+        android:layout_width="183dp"
+        android:layout_height="45dp"
         android:drawableLeft="@drawable/ic_baseline_location_on_24"
         android:drawablePadding="10dp"
         android:ems="20"
@@ -85,13 +85,24 @@
 
     <TextView
         android:id="@+id/EventInfo"
-        android:layout_width="409dp"
-        android:layout_height="182dp"
+        android:layout_width="408dp"
+        android:layout_height="181dp"
         android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/location_tv"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.253" />
+        app:layout_constraintVertical_bias="0.263" />
+
+    <ListView
+        android:id="@+id/ListOFPeople"
+        android:layout_width="376dp"
+        android:layout_height="361dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Clicktoadd" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

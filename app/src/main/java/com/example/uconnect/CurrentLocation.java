@@ -6,10 +6,13 @@ import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Bundle;
 import android.view.WindowManager;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
@@ -32,7 +35,9 @@ public class CurrentLocation extends AppCompatActivity {
 
     SupportMapFragment smf;
     FusedLocationProviderClient client;
+    TextView proceed;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +45,7 @@ public class CurrentLocation extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         smf = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.google_map);
         client = LocationServices.getFusedLocationProviderClient(this);
+        proceed = findViewById(R.id.cproceed);
 
         Dexter.withContext(getApplicationContext())
                 .withPermission(Manifest.permission.ACCESS_FINE_LOCATION)
@@ -88,6 +94,13 @@ public class CurrentLocation extends AppCompatActivity {
                         googleMap.addMarker(markerOptions);
                         googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng,19));
                     }
+
+                });
+                proceed.setOnClickListener(v -> {
+                        Intent i = new Intent(CurrentLocation.this,Landing_Activity.class);
+                        i.putExtra("clocation",location);
+                        startActivity(i);
+
                 });
             }
         });

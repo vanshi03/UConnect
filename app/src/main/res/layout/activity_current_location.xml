@@ -6,11 +6,28 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <fragment
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
         android:id="@+id/google_map"
         android:name="com.google.android.gms.maps.SupportMapFragment"
-        tools:context=".CurrentLocation"/>
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".CurrentLocation" />
+
+    <TextView
+        android:id="@+id/cproceed"
+        android:layout_width="match_parent"
+        android:layout_height="111sp"
+        android:layout_marginTop="690dp"
+        android:background="@drawable/proceed_btn"
+        android:backgroundTint="@color/white"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:text="@string/proceed"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
 
 </RelativeLayout>
+
+
